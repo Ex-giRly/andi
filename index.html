@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects and Arrays Demo</title>
+    <style>
+        body{
+            color: violet;
+            background-color: pink;
+        }
+        
+        h1{
+            color: plum;
+            background-color: lightgoldenrodyellow;
+            text-align: center;
+            padding: 15px;
+            border: 2px solid purple;
+            border-radius: 8px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>All about my brand new tesla </h1>
+    <div id="output"></div>
+
+    <script>
+        let car = {
+            brand: "Tesla",
+            model: "Cybertruck",
+            year: 2024,
+            color: "Purple"
+        };
+
+        let colors = ["Pink", "White", "Yellow", "Blue", "Black"];
+
+        let output = "";
+
+        output += "Car Brand: " + car.brand + "<br>";
+        output += "Car Model: " + car.model + "<br>";
+        output += "Car Year: " + car.year + "<br>";
+        output += "Car Color: " + car.color + "<br><br>";
+
+        output += "First color: " + colors[0] + "<br>";
+        output += "Second color: " + colors[1] + "<br>";
+        output += "Third color: " + colors[2] + "<br><br>";
+
+        output += "All colors (joined): " + colors.join(" | ") + "<br>";
+
+        let removedColor = colors.pop();
+        output += "Removed color: " + removedColor + "<br>";
+        output += "Updated colors array: " + colors.join(", ") + "<br>";
+
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+
+</html>
